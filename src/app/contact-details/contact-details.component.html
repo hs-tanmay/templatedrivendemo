@@ -1,0 +1,12 @@
+<!-- We can add validatons in form using templates-->
+<form>
+  <div class="form-group">
+    <label for="uname"><b>Username</b></label>
+  <input placeholder="Enter Username" required ngModel name="StudName" #name="ngModel" id="StudName" type="text" class="form-control"><br>
+    <div style="color:red;font-weight:bold;" class="alert alert-danger" *ngIf="!name.valid">Name is Compulsory.</div><br>
+</div>
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+<button type="submit">Login</button>
+</form>
